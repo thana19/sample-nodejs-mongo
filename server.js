@@ -108,7 +108,7 @@ app.delete('/products/:id', async (req, res) => {
 
 // สำหรับ HTTP GET
 app.get('/', (req, res) => {
-  res.json({ message: 'Sample-nodejs-mongo 1.9' })
+  res.json({ message: 'Sample-nodejs-mongo 1.11' })
 })
 
 // app.get('/hello/:message', (req, res) => {
