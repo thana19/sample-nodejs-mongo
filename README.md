@@ -70,19 +70,25 @@ Docker Push
 docker push [image name] 
 ```
 
-Create a docker-compose.yml
+Docker Respotory
+```
+https://hub.docker.com/repository/docker/thana19/sample-nodejs-mongo
+```
+Docker Run
+```
+docker run --name sample -d -p 3001:9000 thana19/sample-nodejs-mongo
+```
+or Create a docker-compose.yml
 ```
 version: '2.0'
 services: 
     web:
-        image: [image name]
-        container_name: [container name]
+        image: thana19/sample-nodejs-mongo
+        container_name: sample
         restart: always
         ports: 
         - 9000:9000
 ```
-
-
 ```
 docker-compose up -d
 ```
