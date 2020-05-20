@@ -23,6 +23,16 @@ app.post('/products', async (req, res) => {
   res.status(201).end()
 })
 
+app.get('/products', async (req, res) => {
+    const products = await Product.find({})
+    res.json(products)
+})
+
+app.get('/products/:id', async (req, res) => {
+    const { id } = req.params
+    const product = await Product.findById(id)
+    res.json(product)
+})
 // mock data
 // const products = [
 //     {
