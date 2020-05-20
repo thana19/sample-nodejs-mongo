@@ -33,6 +33,30 @@ app.get('/products/:id', async (req, res) => {
     const product = await Product.findById(id)
     res.json(product)
 })
+
+const data = {
+    $set: {
+      newValue: 'new data'
+    }
+}
+Product.findByIdAndUpdate('ObjectId', data)
+
+app.put('/products/:id', async (req, res) => {
+    const payload = req.body
+    const { id } = req.params
+  
+    const product = await Product.findByIdAndUpdate(id, { $set: payload })
+    res.json(product)
+})
+
+app.delete('/products/:id', async (req, res) => {
+    const { id } = req.params
+  
+    await Product.findByIdAndDelete(id)
+    res.status(204).end()
+})
+
+
 // mock data
 // const products = [
 //     {
@@ -82,10 +106,10 @@ app.get('/products/:id', async (req, res) => {
   
 // //---------------------------------------------
 
-// // สำหรับ HTTP GET
-// app.get('/', (req, res) => {
-//   res.json({ message: 'Sample-nodejs-mongo 1.4' })
-// })
+// สำหรับ HTTP GET
+app.get('/', (req, res) => {
+  res.json({ message: 'Sample-nodejs-mongo 1.9' })
+})
 
 // app.get('/hello/:message', (req, res) => {
 //     const { params } = req
