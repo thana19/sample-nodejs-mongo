@@ -65,6 +65,10 @@ Docker Build
 ```
 docker build -t [image name] .
 ```
+Docker Push
+```
+docker push [image name] 
+```
 
 Create a docker-compose.yml
 ```
