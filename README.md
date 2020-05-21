@@ -31,15 +31,21 @@ npm install
 npm start
 ```
 
-HTTP get
+GET /products
 ```
 http://localhost:9000/products
+```
+GET /products/1
+```
 http://localhost:9000/products/[id]
 
 ```
-HTTP Post
+POST /products
 ```
 http://localhost:9000/products
+```
+body
+```
 {
   "name": "My Product from localhost",
   "category": "localhost",
@@ -47,9 +53,12 @@ http://localhost:9000/products
   "tags": ["test1", "test2", "tag1"]
 }
 ```
-HTTP Put
+PUT /products/1
 ```
 http://localhost:9000/products/[id]
+```
+body
+```
 {
   "name": "My Product from localhost",
   "category": "localhost",
@@ -57,7 +66,7 @@ http://localhost:9000/products/[id]
   "tags": ["test1", "test2", "tag1"]
 }
 ```
-HTTP Delete
+DELETE /products/1
 ```
 http://localhost:9000/products/[id]
 ```
