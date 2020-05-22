@@ -1,0 +1,8 @@
+version: '2.0'
+services: 
+    web:
+        image: thana19/sample-nodejs-mongo:1.13
+        container_name: sapi
+        restart: always
+        ports: 
+        - "9000:9000"

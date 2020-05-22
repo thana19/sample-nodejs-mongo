@@ -18,7 +18,7 @@ app.use(express.json())
 
 // HTTP GET
 app.get('/', (req, res) => {
-  res.json({ message: 'Sample-nodejs-mongo 1.12' })
+  res.json({ message: 'Sample-nodejs-mongo 1.13' })
 })
 
 app.post('/products', async (req, res) => {
